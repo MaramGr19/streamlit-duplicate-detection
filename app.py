@@ -147,3 +147,23 @@ if uploaded_files:
                     st.download_button(f"Download data without duplicates", data=processed_data, file_name=file_name, mime="application/octet-stream")
                 else:
                     st.info("No duplicates detected.")
+import streamlit as st
+import streamlit.components.v1 as components
+
+# كود إعلان Google AdSense
+ad_code = """
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5516684255358548"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5516684255358548"
+     data-ad-slot="XXXXXXX"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+"""
+
+
+components.html(ad_code, height=150)
